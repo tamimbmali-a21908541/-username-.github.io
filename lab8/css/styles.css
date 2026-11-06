@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #17191d;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  background: #f1f2f3;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem max(7vw, 2rem);
+  color: white;
+  background: #0b0d10;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #1769aa;
+}
+
+main {
+  width: min(1360px, 100%);
+  margin: 0 auto;
+  padding: 3rem max(7vw, 2rem) 5.5rem;
+}
+
+#produtos {
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  background: url("https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png")
+    center / cover no-repeat;
+}
+
+#cesto {
+  padding: 2.5rem 2rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  background: #800080;
+}
+
+#produtos > div,
+#produtos-selecionados,
+#lista-amigos,
+.metodos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 1.25rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+  padding: 1.5rem;
+  border: 1px solid #d9dde1;
+  border-radius: 0.75rem;
+  color: #17191d;
+  background: #fff;
+  box-shadow: 0 0.55rem 1.8rem rgb(11 13 16 / 8%);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+article:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 1rem 2.2rem rgb(11 13 16 / 15%);
+}
+
+article img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: -1.5rem -1.5rem 1.5rem;
+  object-fit: contain;
+  background: #e9ecef;
+}
+
+.logo-deisi {
+  height: 2.6rem;
+  width: auto;
+}
+
+article h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+#produtos > h2,
+#cesto > h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+article p {
+  margin: 0 0 0.85rem;
+  color: #6c727a;
+  font-size: 0.88rem;
+}
+
+.compra-opcoes p {
+  margin: 0;
+  font-weight: 600;
+}
+
+article p:nth-last-of-type(2) {
+  color: #1769aa;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+#preco-total {
+  margin: 1.5rem 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  height: 100%;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+input,
+select {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d9dde1;
+  background: #fff;
+  font: inherit;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+  margin: 0 0 2rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #d9dde1;
+  border-radius: 0.5rem;
+  background: #f8f9fa;
+}
+
+.compra-opcoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  max-width: 460px;
+  margin: 1.5rem auto 0;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  margin-top: auto;
+  padding: 0.9rem 1rem;
+  border: 1px solid #0b0d10;
+  border-radius: 0.35rem;
+  color: white;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #0b0d10;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+button:hover {
+  border-color: #1769aa;
+  background: #1769aa;
+}
+
+footer {
+  min-height: 7rem;
+  background: #0b0d10;
+}
+
+@media (width <= 650px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  main {
+    padding-top: 2.5rem;
+  }
+
+  #produtos > div {
+    gap: 1.25rem;
+  }
+}

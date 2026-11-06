@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cesto - Loja</title>
+    <link rel="icon" href="images/deisi-ball%20(1).png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo-deisi"
+        src="images/deisi-inverse%20(1).svg"
+        alt="DEISI Shop"
+      />
+      <h1>Loja</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html#produtos">Produtos</a></li>
+          <li><a href="cesto.html">Cesto</a></li>
+          <li><a href="amigos.html">Amigos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="cesto">
+        <h2>Produtos Selecionados</h2>
+        <div id="produtos-selecionados"></div>
+        <p id="preco-total"></p>
+
+        <div class="compra-opcoes">
+          <label for="estudante-deisi">
+            És estudante do DEISI?
+            <input id="estudante-deisi" type="checkbox" />
+          </label>
+
+          <label for="cupao-desconto">
+            Cupão de desconto:
+            <input id="cupao-desconto" type="text" />
+          </label>
+
+          <button id="botao-comprar" type="button">Comprar</button>
+
+          <p id="valor-final"></p>
+          <p id="referencia-pagamento"></p>
+          <p id="mensagem-compra"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="script/main.js"></script>
+  </body>
+</html>

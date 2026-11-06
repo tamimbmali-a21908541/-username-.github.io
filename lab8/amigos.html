@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amigos - API RESTful</title>
+    <link rel="icon" href="images/deisi-ball%20(1).png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo-deisi"
+        src="images/deisi-inverse%20(1).svg"
+        alt="DEISI Shop"
+      />
+      <h1>Loja</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html#produtos">Produtos</a></li>
+          <li><a href="cesto.html">Cesto</a></li>
+          <li><a href="amigos.html">Amigos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="amigos-lista">
+        <h2>GET - Lista de Amigos</h2>
+        <div id="lista-amigos"></div>
+      </section>
+
+      <section id="amigos-metodos">
+        <h2>Métodos HTTP (GET, POST, PUT, PATCH, DELETE)</h2>
+        <p id="mensagem-estado"></p>
+
+        <div class="metodos-grid">
+          <article>
+            <h3>GET por ID</h3>
+            <form id="form-get">
+              <label for="get-id">ID do Amigo</label>
+              <input id="get-id" type="number" min="1" required />
+              <button type="submit">Procurar (GET)</button>
+            </form>
+            <p id="resultado-get"></p>
+          </article>
+
+          <article>
+            <h3>POST - Criar Amigo</h3>
+            <form id="form-post">
+              <label for="post-nome">Nome</label>
+              <input id="post-nome" type="text" required />
+              <label for="post-idade">Idade</label>
+              <input id="post-idade" type="number" min="1" required />
+              <button type="submit">Criar (POST)</button>
+            </form>
+          </article>
+
+          <article>
+            <h3>PUT - Substituir Amigo</h3>
+            <form id="form-put">
+              <label for="put-id">ID do Amigo</label>
+              <input id="put-id" type="number" min="1" required />
+              <label for="put-nome">Novo Nome</label>
+              <input id="put-nome" type="text" required />
+              <label for="put-idade">Nova Idade</label>
+              <input id="put-idade" type="number" min="1" required />
+              <button type="submit">Atualizar Tudo (PUT)</button>
+            </form>
+          </article>
+
+          <article>
+            <h3>PATCH - Atualizar Parcialmente</h3>
+            <form id="form-patch">
+              <label for="patch-id">ID do Amigo</label>
+              <input id="patch-id" type="number" min="1" required />
+              <label for="patch-nome">Novo Nome (opcional)</label>
+              <input id="patch-nome" type="text" />
+              <label for="patch-idade">Nova Idade (opcional)</label>
+              <input id="patch-idade" type="number" min="1" />
+              <button type="submit">Atualizar (PATCH)</button>
+            </form>
+          </article>
+
+          <article>
+            <h3>DELETE - Apagar Amigo</h3>
+            <form id="form-delete">
+              <label for="delete-id">ID do Amigo</label>
+              <input id="delete-id" type="number" min="1" required />
+              <button type="submit">Apagar (DELETE)</button>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="script/amigos.js"></script>
+  </body>
+</html>
